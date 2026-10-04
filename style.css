@@ -1,0 +1,102 @@
+:root {
+  --bg-color: #ffe5ec;
+  --clay-base: #ffe5ec;
+  --shadow-dark: #d4b2bc;
+  --shadow-light: #ffffff;
+  --inner-dark: rgba(212, 178, 188, 0.5);
+  --inner-light: rgba(255, 255, 255, 0.8);
+  --clay-green: #b5ead7;
+  --clay-blue: #c7ceea;
+  --clay-red: #ffb7b2;
+  --text-main: #5c3a45;
+  --text-muted: #9e7b86;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.clay-container {
+  background-color: var(--clay-base);
+  border-radius: 40px;
+  padding: 40px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+
+  box-shadow:
+    12px 12px 24px var(--shadow-dark),
+    -12px -12px 24px var(--shadow-light),
+    inset 6px 6px 12px var(--inner-light),
+    inset -6px -6px 12px var(--inner-dark);
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.subtitle {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.clay-panel {
+  background-color: var(--clay-base);
+  border-radius: 25px;
+  padding: 25px;
+  margin-top: 10px;
+
+  box-shadow:
+    inset 8px 8px 16px var(--shadow-dark),
+    inset -8px -8px 16px var(--shadow-light);
+}
+
+.placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.result-text {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: 1px;
+
+  box-shadow:
+    6px 6px 12px var(--shadow-dark),
+    -6px -6px 12px var(--shadow-light),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.6),
+    inset -4px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.excellent {
+  background-color: var(--clay-green);
+}
+.passed {
+  background-color: var(--clay-blue);
+}
+.failed,
+.error {
+  background-color: var(--clay-red);
+}
